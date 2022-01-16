@@ -40,7 +40,7 @@ const Navbar = () => {
       textDecoration: "none",
     },
     brandIcon: {
-      textAlign: "center",
+      textAlign: "left",
     },
     appbarMain: {
       backgroundColor: "#303e67",
@@ -122,7 +122,7 @@ const Navbar = () => {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar  position="fixed">
           <Toolbar className={appbarMain}>
             <IconButton
               size="large"

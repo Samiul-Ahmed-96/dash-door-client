@@ -1,7 +1,8 @@
 .featured-item {
-  color: #303e67;
+  color: var(--main-color);
+  text-align: center;
   .cost {
-    background: #303e67;
+    background-color: var(--main-color);
     color: #fff;
     display: flex;
     align-items: center;
