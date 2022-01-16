@@ -1,6 +1,20 @@
-
-import { Settings } from "@mui/icons-material";
-import AccountCircle from "@mui/icons-material/AccountCircle";
+import {
+  AutoGraphOutlined,
+  DynamicFeedOutlined,
+  ExitToAppOutlined,
+  HomeOutlined,
+  MailOutlineOutlined,
+  ManageAccountsOutlined,
+  MarkEmailUnreadOutlined,
+  MessageOutlined,
+  NotificationsNoneOutlined,
+  PaidOutlined,
+  ProductionQuantityLimitsOutlined,
+  ReportOutlined,
+  Settings,
+  SupervisedUserCircleSharp,
+  TrendingDownOutlined
+} from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
@@ -16,7 +30,7 @@ import Typography from "@mui/material/Typography";
 import { makeStyles } from "@mui/styles";
 import * as React from "react";
 import { Link } from "react-router-dom";
-import './Navbar.scss';
+import "./Navbar.scss";
 
 const Navbar = () => {
   const theme = useTheme();
@@ -29,16 +43,16 @@ const Navbar = () => {
       textAlign: "center",
     },
     appbarMain: {
-      backgroundColor: "#222",
+      backgroundColor: "#303e67",
     },
-    userImg : {
-      width : '35px',
-      borderRadius : '50%',
-      marginLeft : '2.5px'
-    }
+    userImg: {
+      width: "35px",
+      borderRadius: "50%",
+      marginLeft: "2.5px",
+    },
   });
   //Destructure Styles
-  const { navItem, brandIcon, navIcon, appbarMain ,userImg  } = useStyle();
+  const { navItem, brandIcon, navIcon, appbarMain, userImg } = useStyle();
   //Drawer content
   const [state, setState] = React.useState(false);
 
@@ -46,12 +60,63 @@ const Navbar = () => {
     <Box sx={{ width: 250 }} role="presentation">
       <List>
         <ListItem button>
-          <ListItemText>
-            <Link to="/home">Home</Link>
-          </ListItemText>
+          <Box>
+            <h4>Dashboard</h4>
+            <ListItemText>
+            <HomeOutlined/> <Link to="/home"> Home</Link>
+            </ListItemText>
+            <ListItemText>
+             <AutoGraphOutlined/> <Link to="/home">Analytics</Link>
+            </ListItemText>
+            <ListItemText>
+             <TrendingDownOutlined/> <Link to="/home">Sales</Link>
+            </ListItemText>
+          </Box>
+        </ListItem>
+        <Divider />
+        <ListItem button>
+          <Box>
+            <h4>Notifications</h4>
+            <ListItemText>
+             <MarkEmailUnreadOutlined/> <Link to="/home">Mail</Link>
+            </ListItemText>
+            <ListItemText>
+             <DynamicFeedOutlined
+             /> <Link to="/home">Feedback</Link>
+            </ListItemText>
+            <ListItemText>
+            <MessageOutlined/>  <Link to="/home">Messages</Link>
+            </ListItemText>
+          </Box>
+        </ListItem>
+        <Divider />
+        <ListItem button>
+          <Box>
+            <h4>Quick Menu</h4>
+            <ListItemText>
+             <SupervisedUserCircleSharp/> <Link to="/home">Users</Link>
+            </ListItemText>
+            <ListItemText>
+            <ProductionQuantityLimitsOutlined/>  <Link to="/home">Products</Link>
+            </ListItemText>
+            <ListItemText>
+            <PaidOutlined/>  <Link to="/home">Transaction</Link>
+            </ListItemText>
+            <ListItemText>
+            <ReportOutlined/>  <Link to="/home">Reports</Link>
+            </ListItemText>
+          </Box>
+        </ListItem>
+        <Divider />
+        <ListItem button>
+          <Box>
+            <h4>Staff</h4>
+            <ListItemText>
+             <ManageAccountsOutlined/> <Link to="/home">Manage</Link>
+            </ListItemText>
+          </Box>
         </ListItem>
       </List>
-      <Divider />
     </Box>
   );
   return (
@@ -78,10 +143,17 @@ const Navbar = () => {
             >
               Dash Door
             </Typography>
-            <Box className='navContainer'>
-            <Settings/>
-            <AccountCircle/>
-            <img className={userImg} src='https://i.ibb.co/n8GJgH1/52779957-2069016613219812-3461297316164534272ff-nggg.jpg' alt="" />
+            <Box className="navContainer">
+              <img
+                className={userImg}
+                src="https://i.ibb.co/n8GJgH1/52779957-2069016613219812-3461297316164534272ff-nggg.jpg"
+                alt=""
+              />
+              <MailOutlineOutlined />
+              <NotificationsNoneOutlined />
+
+              <Settings />
+              <ExitToAppOutlined />
             </Box>
           </Toolbar>
         </AppBar>
