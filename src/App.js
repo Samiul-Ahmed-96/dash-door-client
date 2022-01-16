@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Home from './Components/Pages/Home/Home';
+import Home from './Components/Pages/Home/Home/Home';
 import Products from './Components/Pages/Products/Products';
 import Navbar from './Components/Shared/Navbar/Navbar';
 
@@ -11,6 +11,9 @@ function App() {
     <Navbar/>
     <Switch>
       <Route exact path="/">
+          <Home/>
+      </Route>
+      <Route exact path="/home">
           <Home/>
       </Route>
       <Route exact path="/products">
