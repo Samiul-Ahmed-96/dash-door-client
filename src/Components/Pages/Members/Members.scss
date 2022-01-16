@@ -1,0 +1,16 @@
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .user-act {
+    display: flex;
+    align-items: center;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 0px 20px;
+    border-radius: 10px;
+    svg {
+      margin-right: 10px;
+    }
+  }
+}

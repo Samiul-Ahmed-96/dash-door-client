@@ -30,6 +30,7 @@ import Typography from "@mui/material/Typography";
 import { makeStyles } from "@mui/styles";
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -44,6 +45,7 @@ const Navbar = () => {
     },
     appbarMain: {
       backgroundColor: "#303e67",
+      
     },
     userImg: {
       width: "35px",
@@ -66,7 +68,7 @@ const Navbar = () => {
             <HomeOutlined/> <Link to="/home"> Home</Link>
             </ListItemText>
             <ListItemText>
-             <AutoGraphOutlined/> <Link to="/home">Analytics</Link>
+             <AutoGraphOutlined/> <HashLink to="/home#userAnalytics">Analytics</HashLink>
             </ListItemText>
             <ListItemText>
              <TrendingDownOutlined/> <Link to="/home">Sales</Link>
@@ -94,7 +96,7 @@ const Navbar = () => {
           <Box>
             <h4>Quick Menu</h4>
             <ListItemText>
-             <SupervisedUserCircleSharp/> <Link to="/home">Users</Link>
+             <SupervisedUserCircleSharp/> <Link to="/members">Members</Link>
             </ListItemText>
             <ListItemText>
             <ProductionQuantityLimitsOutlined/>  <Link to="/home">Products</Link>
@@ -137,7 +139,7 @@ const Navbar = () => {
             </IconButton>
             <Typography
               className={brandIcon}
-              variant="h4"
+              variant="h5"
               component="div"
               sx={{ flexGrow: 1 }}
             >
