@@ -1,14 +1,14 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
 import {
-    CartesianGrid,
-    Line,
-    LineChart,
-    ResponsiveContainer,
-    Tooltip,
-    XAxis
+  CartesianGrid,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis
 } from "recharts";
-
+import './Chart.scss';
 const Chart = () => {
   const data = [
     {
@@ -70,6 +70,7 @@ const Chart = () => {
           <h2>User Analytics</h2>
         </Box>
         <ResponsiveContainer
+          className='userChart'
           sx={{ width: "100%", padding: "10px" }}
           aspect={4 / 1}
         >

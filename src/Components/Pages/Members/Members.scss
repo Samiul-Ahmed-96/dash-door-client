@@ -1,16 +1,36 @@
 .user-info {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px;
+  margin-top: 10px;
+  .user-details {
+    text-align: left;
+    h3 {
+      margin: 0;
+      text-transform: capitalize;
+      color: var(--main-color);
+    }
+  }
   .user-act {
     display: flex;
     align-items: center;
     background-color: var(--main-color);
     color: #fff;
     padding: 0px 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     svg {
       margin-right: 10px;
+    }
+  }
+}
+// for-mobile-screen
+@media only screen and (min-device-width: 300px) and (max-device-width: 600px) {
+  .user-info {
+    display: block;
+    .user-act {
+      margin-top: 10px;
     }
   }
 }

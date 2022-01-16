@@ -71,7 +71,7 @@ const Navbar = () => {
              <AutoGraphOutlined/> <HashLink to="/home#userAnalytics">Analytics</HashLink>
             </ListItemText>
             <ListItemText>
-             <TrendingDownOutlined/> <Link to="/home">Sales</Link>
+             <TrendingDownOutlined/> <HashLink to="/home#featuredInfo">Sales</HashLink>
             </ListItemText>
           </Box>
         </ListItem>

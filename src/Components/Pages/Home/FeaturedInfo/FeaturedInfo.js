@@ -5,7 +5,7 @@ import './FeaturedInfo.scss';
 
 const FeaturedInfo = () => {
     return (
-       <Grid spacing={2} container padding={3} marginTop={8}>
+       <Grid id="featuredInfo" spacing={2} container padding={3} marginTop={8}>
        <Grid item lg={4} md={4} sm={12} xs={12}>
            <Paper elevation={24}>
                <Card className="featured-item">
