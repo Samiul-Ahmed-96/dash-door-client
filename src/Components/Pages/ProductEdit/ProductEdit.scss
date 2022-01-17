@@ -1,16 +1,32 @@
 .single-item-info {
   border: 2px solid var(--main-color);
-  border-radius: 5px;
-  color: var(--main-color);
-  text-align: center;
-  padding: 30px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+
   img {
+    width: 100%;
     background: #fff;
     padding: 30px;
     border-radius: 5px;
+  }
+}
+form.update-form {
+  background: var(--main-color);
+  border: 2px solid #fff;
+  padding: 30px 20px;
+  input {
+    display: block;
+    width: 80%;
+    padding: 5px 20px;
+    margin: 10px auto;
+    font-size: 22px;
+  }
+  input:last-child {
+    background: #82ca9d;
+    border: none;
+    width: 30%;
+    margin: 10px auto;
+    cursor: pointer;
   }
 }

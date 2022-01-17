@@ -76,7 +76,7 @@ const Members = () => {
         <Box className="component-title">
           <h2>Latest Transaction</h2>
         </Box>
-        <TableContainer component={Paper} elevation={24}>
+        <TableContainer id="transaction" component={Paper} elevation={24}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow

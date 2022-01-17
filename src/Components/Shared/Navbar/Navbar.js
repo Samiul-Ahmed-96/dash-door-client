@@ -102,7 +102,7 @@ const Navbar = () => {
             <ProductionQuantityLimitsOutlined/>  <Link to="/manageProducts">Manage Products</Link>
             </ListItemText>
             <ListItemText>
-            <PaidOutlined/>  <Link to="/home">Transaction</Link>
+            <PaidOutlined/>  <HashLink to="/members#transaction">Transaction</HashLink>
             </ListItemText>
             <ListItemText>
             <ReportOutlined/>  <Link to="/home">Reports</Link>

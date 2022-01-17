@@ -66,11 +66,70 @@ const ProductEdit = () => {
       .then((res) => res.json())
       .then((data) => setSingleItem(data));
   }, []);
+
+
+  //update Service
+  const handleNameChange = (e) => {
+    const updatedName = e.target.value;
+    const updatedItem = {
+      name: updatedName,
+      img: singleItem.img,
+      price: singleItem.price,
+      rating: singleItem.rating,
+      brand: singleItem.brand,
+    };
+    setSingleItem(updatedItem);
+  };
+
+  const handlePriceChange = (e) => {
+    const updatedPrice = e.target.value;
+    const updatedItem = {
+        name: singleItem.name,
+        img: singleItem.img,
+        price: updatedPrice,
+        rating: singleItem.rating,
+        brand: singleItem.brand,
+    };
+
+    setSingleItem(updatedItem);
+  };
+  const handleBrandChange = (e) => {
+    const updatedBrand = e.target.value;
+    const updatedItem = {
+        name: singleItem.name,
+        img: singleItem.img,
+        price: singleItem.price,
+        rating: singleItem.rating,
+        brand: updatedBrand,
+    };
+
+    setSingleItem(updatedItem);
+  };
+  //Update
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    // const url = `https://stormy-basin-00847.herokuapp.com/services/${id}`
+    // fetch(url,{
+    //     method : "PUT",
+    //     headers: {
+    //         'content-type': 'application/json'
+    //     },
+    //     body:JSON.stringify(singleItem)
+    // }) 
+    // .then(res => res.json())
+    // .then(data =>{
+    //     console.log(data)
+    //     if(data.modifiedCount===1){
+    //         alert('Update Successfully');
+    //     }
+        
+    // })
+  };
   return (
     <Grid spacing={2} container padding={3} marginTop={6}>
       <Grid item lg={12} md={12} sm={12} xs={12} marginTop={1}>
         <Box className="component-title">
-          <h2>Product Sales</h2>
+          <h2>Product Sales Analytics</h2>
         </Box>
         <ResponsiveContainer width="100%" height="80%">
         <BarChart
@@ -98,10 +157,10 @@ const ProductEdit = () => {
         </Box>
         <Paper elevation={24}>
           <Box className="single-item-info">
-            <img src={singleItem.img} alt="" />
-            <h3>Model : {singleItem.name}</h3>
+            <Box><img src={singleItem.img} alt="" /></Box>
+            <Box> <h3>Model : {singleItem.name}</h3>
             <h4>Brand : {singleItem.brand}</h4>
-            <h2>Price : {singleItem.price}</h2>
+            <h2>Price : {singleItem.price}</h2></Box>
           </Box>
         </Paper>
       </Grid>
@@ -110,7 +169,24 @@ const ProductEdit = () => {
           <h2>Edit Product</h2>
         </Box>
         <Paper elevation={24}>
-         
+        <form className="update-form" onSubmit={handleUpdate}>
+        <input
+          type="text"
+          onChange={handleNameChange}
+          value={singleItem?.name}
+        ></input>
+        <input
+          type="text"
+          onChange={handlePriceChange}
+          value={singleItem?.price}
+        ></input>
+        <input
+          type="text"
+          onChange={handleBrandChange}
+          value={singleItem?.brand}
+        ></input>
+        <input type="submit" value="Update"></input>
+      </form>
         </Paper>
       </Grid>
     </Grid>
