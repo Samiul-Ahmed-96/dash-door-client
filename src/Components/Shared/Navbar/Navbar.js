@@ -99,7 +99,7 @@ const Navbar = () => {
              <SupervisedUserCircleSharp/> <Link to="/members">Members</Link>
             </ListItemText>
             <ListItemText>
-            <ProductionQuantityLimitsOutlined/>  <Link to="/home">Products</Link>
+            <ProductionQuantityLimitsOutlined/>  <Link to="/products">Products</Link>
             </ListItemText>
             <ListItemText>
             <PaidOutlined/>  <Link to="/home">Transaction</Link>

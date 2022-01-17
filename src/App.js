@@ -17,6 +17,9 @@ function App() {
       <Route exact path="/home">
           <Home/>
       </Route>
+      <Route exact path="/products">
+          <Products/>
+      </Route>
       <Route exact path="/members">
           <Members/>
       </Route>
