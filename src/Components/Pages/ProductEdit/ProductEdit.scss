@@ -1,0 +1,16 @@
+.single-item-info {
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  color: var(--main-color);
+  text-align: center;
+  padding: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  img {
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+  }
+}
