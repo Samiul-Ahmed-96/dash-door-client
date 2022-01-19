@@ -5,6 +5,8 @@ import Home from './Components/Pages/Home/Home/Home';
 import Members from './Components/Pages/Members/Members';
 import ProductEdit from './Components/Pages/ProductEdit/ProductEdit';
 import Products from './Components/Pages/Products/Products';
+import SalesReport from './Components/Pages/SalesReport/SalesReport';
+import UserFeedback from './Components/Pages/UserFeedback/UserFeedback';
 import Navbar from './Components/Shared/Navbar/Navbar';
 
 function App() {
@@ -24,6 +26,12 @@ function App() {
       </Route>
       <Route exact path="/addNewProduct">
           <AddNewProduct/>
+      </Route>
+      <Route exact path="/userFeedback">
+          <UserFeedback/>
+      </Route>
+      <Route exact path="/salesReport">
+          <SalesReport/>
       </Route>
       <Route exact path="/ProductEdit/:id">
           <ProductEdit/>

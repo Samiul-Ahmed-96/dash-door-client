@@ -1,4 +1,8 @@
-import { AddCircleOutlineOutlined, DeleteOutlined, ModeEdit } from "@mui/icons-material";
+import {
+  AddCircleOutlineOutlined,
+  DeleteOutlined,
+  ModeEdit
+} from "@mui/icons-material";
 import {
   Alert,
   Box,
@@ -20,7 +24,7 @@ import "./Products.scss";
 const Products = () => {
   //State
   const [products, setProducts] = useState([]);
-  const [success,setSuccess] = useState(false);
+  const [success, setSuccess] = useState(false);
   //Data Load
   useEffect(() => {
     fetch("http://localhost:5000/watchItems")
@@ -28,38 +32,41 @@ const Products = () => {
       .then((data) => setProducts(data));
   }, []);
 
-  
-    //handle Delete
-    const handleDelete = (id ) =>{
-      const deleteConfirm = window.confirm("Want to delete?");
-      if (deleteConfirm) {
-          const url = `http://localhost:5000/watchItems/${id}`;
-          fetch(url,{
-              method : 'DELETE'
-          })
-          .then(res => res.json())
-          .then(data => {
-  
-              if(data.deletedCount){
-                setSuccess(true)
-                  const remaining = products.filter(product => product._id !== id)
-                  setProducts(remaining);
-              }
-          })
-      }
-      
-  }
+  //handle Delete
+  const handleDelete = (id) => {
+    const deleteConfirm = window.confirm("Want to delete?");
+    if (deleteConfirm) {
+      const url = `http://localhost:5000/watchItems/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount) {
+            setSuccess(true);
+            const remaining = products.filter((product) => product._id !== id);
+            setProducts(remaining);
+          }
+        });
+    }
+  };
   return (
     <Grid spacing={2} container padding={3} marginTop={6}>
       <Grid item lg={12} md={12} sm={12} xs={12} marginTop={1}>
-      {
-        success === true && <Alert className='update-alert' severity="success">Delete Successfully</Alert> 
-      }
+        {success === true && (
+          <Alert className="update-alert" severity="success">
+            Delete Successfully
+          </Alert>
+        )}
         <Box className="component-title">
           <h2>Manage All Products</h2>
           <div className="added-item">
-          <Link to="/addNewProduct"><Button variant="outlined"><AddCircleOutlineOutlined/> Add New Product</Button></Link>
-        </div>
+            <Link to="/addNewProduct">
+              <Button variant="outlined">
+                <AddCircleOutlineOutlined /> Add New Product
+              </Button>
+            </Link>
+          </div>
         </Box>
         {products.length === 0 ? (
           <LinearProgress />
@@ -104,7 +111,11 @@ const Products = () => {
                             <ModeEdit />
                           </Button>
                         </Link>
-                        <Button onClick={()=> handleDelete(product._id)} variant="contained" className="delete-btn">
+                        <Button
+                          onClick={() => handleDelete(product._id)}
+                          variant="contained"
+                          className="delete-btn"
+                        >
                           <DeleteOutlined />
                         </Button>
                       </div>

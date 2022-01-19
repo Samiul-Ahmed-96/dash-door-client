@@ -1,0 +1,11 @@
+.feedback-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  .single-feedback {
+    background: var(--main-color);
+    color: #fff;
+    padding: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+}

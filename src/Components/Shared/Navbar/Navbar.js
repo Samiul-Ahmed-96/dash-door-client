@@ -4,9 +4,7 @@ import {
   ExitToAppOutlined,
   HomeOutlined,
   MailOutlineOutlined,
-  ManageAccountsOutlined,
-  MarkEmailUnreadOutlined,
-  MessageOutlined,
+  ManageAccountsOutlined, MessageOutlined,
   NotificationsNoneOutlined,
   PaidOutlined,
   ProductionQuantityLimitsOutlined,
@@ -45,7 +43,6 @@ const Navbar = () => {
     },
     appbarMain: {
       backgroundColor: "#303e67",
-      
     },
     userImg: {
       width: "35px",
@@ -65,47 +62,51 @@ const Navbar = () => {
           <Box>
             <h4>Dashboard</h4>
             <ListItemText>
-            <HomeOutlined/> <Link to="/home"> Home</Link>
+              <HomeOutlined /> <Link to="/home"> Home</Link>
             </ListItemText>
             <ListItemText>
-             <AutoGraphOutlined/> <HashLink to="/home#userAnalytics">Analytics</HashLink>
+              <AutoGraphOutlined />{" "}
+              <HashLink to="/home#userAnalytics">User Analytics</HashLink>
             </ListItemText>
             <ListItemText>
-             <TrendingDownOutlined/> <HashLink to="/home#featuredInfo">Sales</HashLink>
-            </ListItemText>
-          </Box>
-        </ListItem>
-        <Divider />
-        <ListItem button>
-          <Box>
-            <h4>Notifications</h4>
-            <ListItemText>
-             <MarkEmailUnreadOutlined/> <Link to="/home">Mail</Link>
-            </ListItemText>
-            <ListItemText>
-             <DynamicFeedOutlined
-             /> <Link to="/home">Feedback</Link>
-            </ListItemText>
-            <ListItemText>
-            <MessageOutlined/>  <Link to="/home">Messages</Link>
+              <TrendingDownOutlined />{" "}
+              <HashLink to="/home#featuredInfo">Sales</HashLink>
             </ListItemText>
           </Box>
         </ListItem>
         <Divider />
         <ListItem button>
           <Box>
-            <h4>Quick Menu</h4>
+            <h4>Users</h4>
             <ListItemText>
-             <SupervisedUserCircleSharp/> <Link to="/members">Members</Link>
+            <SupervisedUserCircleSharp /> <Link to="/members">All Users</Link>
+          </ListItemText>
+          <ListItemText>
+          <PaidOutlined />
+          <HashLink to="/members#transaction">User Transaction</HashLink>
+        </ListItemText>
+            <ListItemText>
+              <DynamicFeedOutlined /> <Link to="/userFeedback">User Feedback</Link>
             </ListItemText>
             <ListItemText>
-            <ProductionQuantityLimitsOutlined/>  <Link to="/manageProducts">Manage Products</Link>
+              <MessageOutlined /> <Link to="/home">Messages</Link>
+            </ListItemText>
+          </Box>
+        </ListItem>
+        <Divider />
+        <ListItem button>
+          <Box>
+            <h4>Products</h4>
+            <ListItemText>
+              <ProductionQuantityLimitsOutlined />{" "}
+              <Link to="/manageProducts">Manage Products</Link>
+            </ListItemText>
+
+            <ListItemText>
+              <ReportOutlined /> <Link to="/addNewProduct">Add A Product</Link>
             </ListItemText>
             <ListItemText>
-            <PaidOutlined/>  <HashLink to="/members#transaction">Transaction</HashLink>
-            </ListItemText>
-            <ListItemText>
-            <ReportOutlined/>  <Link to="/home#salesReport">Sales Report</Link>
+              <ReportOutlined /> <Link to="/salesReport">Sales Report</Link>
             </ListItemText>
           </Box>
         </ListItem>
@@ -114,7 +115,7 @@ const Navbar = () => {
           <Box>
             <h4>Staff</h4>
             <ListItemText>
-             <ManageAccountsOutlined/> <Link to="/home">Manage</Link>
+              <ManageAccountsOutlined /> <Link to="/home">Manage</Link>
             </ListItemText>
           </Box>
         </ListItem>
@@ -124,7 +125,7 @@ const Navbar = () => {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar  position="fixed">
+        <AppBar position="fixed">
           <Toolbar className={appbarMain}>
             <IconButton
               size="large"

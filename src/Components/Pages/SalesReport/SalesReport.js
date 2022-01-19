@@ -2,7 +2,7 @@ import { Grid } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import {
-    Bar, CartesianGrid, ComposedChart, Line, ResponsiveContainer, Tooltip, XAxis
+  Bar, CartesianGrid, ComposedChart, Line, ResponsiveContainer, Tooltip, XAxis
 } from 'recharts';
   
 
@@ -76,7 +76,7 @@ const SalesReport = () => {
         <Box className="component-title">
           <h2>Sales Report</h2>
         </Box>
-        <ResponsiveContainer width="100%" height="85%">
+        <ResponsiveContainer width="100%" height="90%">
         <ComposedChart
           width={600}
           height={400}

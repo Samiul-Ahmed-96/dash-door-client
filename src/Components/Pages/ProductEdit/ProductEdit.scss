@@ -25,13 +25,14 @@ form.update-form {
     border: none;
   }
   input:last-child {
-    background: #82ca9d;
-    border: none;
+    background: #303e67;
     width: 35%;
     margin: 10px auto;
     cursor: pointer;
     text-align: center;
     border-radius: 5px;
+    border: 2px solid #fff;
+    color: #fff;
   }
 }
 .update-alert {

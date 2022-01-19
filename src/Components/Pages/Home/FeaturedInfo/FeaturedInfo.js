@@ -11,7 +11,7 @@ const FeaturedInfo = () => {
                <Card className="featured-item">
                    <h1>Revenue</h1>
                    <h2>Comapred to last month</h2>
-                   <h1>$4,125</h1>
+                   <h1>$444,125</h1>
                    <div className="cost">
                    <h4>-3.3</h4>
                    <ArrowDownward/>
@@ -24,7 +24,7 @@ const FeaturedInfo = () => {
                <Card className="featured-item">
                    <h1>Sales</h1>
                    <h2>Comapred to last month</h2>
-                   <h1>$2,125</h1>
+                   <h1>$223,125</h1>
                    <div className="cost">
                    <h4>-2.5</h4>
                    <ArrowDownward/>
@@ -37,7 +37,7 @@ const FeaturedInfo = () => {
                <Card className="featured-item">
                    <h1>Cost</h1>
                    <h2>Comapred to last month</h2>
-                   <h1>$7,335</h1>
+                   <h1>$775,335</h1>
                    <div className="cost">
                    <h4>+4.5</h4>
                    <ArrowUpward/>
