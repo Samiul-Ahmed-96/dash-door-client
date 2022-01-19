@@ -21,12 +21,21 @@ form.update-form {
     padding: 5px 20px;
     margin: 10px auto;
     font-size: 22px;
+    border-radius: 5px;
+    border: none;
   }
   input:last-child {
     background: #82ca9d;
     border: none;
-    width: 50%;
+    width: 35%;
     margin: 10px auto;
     cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
   }
+}
+.update-alert {
+  text-align: center;
+  width: 50%;
+  margin: 10px auto;
 }

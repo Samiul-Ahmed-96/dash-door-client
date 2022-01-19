@@ -1,4 +1,4 @@
-import { Box, Grid, Paper } from "@mui/material";
+import { Alert, Box, Grid, Paper } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis } from "recharts";
@@ -59,6 +59,7 @@ const ProductEdit = () => {
   const { id } = useParams();
   //State
   const [singleItem, setSingleItem] = useState({});
+  const [success,setSuccess] = useState(false);
 
   //Data load
   useEffect(() => {
@@ -120,14 +121,18 @@ const ProductEdit = () => {
     .then(data =>{
         console.log(data)
         if(data.modifiedCount===1){
-            alert('Update Successfully');
+          setSuccess(true)
         }
         
     })
   };
   return (
-    <Grid spacing={2} container padding={3} marginTop={6}>
+    <Grid spacing={2} container padding={3} marginTop={6} >
+     
       <Grid item lg={12} md={12} sm={12} xs={12} marginTop={1}>
+      {
+        success === true && <Alert className='update-alert' severity="success">Update Successfully</Alert> 
+      }
         <Box className="component-title">
           <h2>Product Sales Analytics</h2>
         </Box>
@@ -152,6 +157,7 @@ const ProductEdit = () => {
       </ResponsiveContainer>
       </Grid>
       <Grid item lg={4} md={4} sm={12} xs={12} marginTop={1}>
+      
         <Box className="component-title">
           <h2>Product Details</h2>
         </Box>
