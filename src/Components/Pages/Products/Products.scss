@@ -18,3 +18,24 @@
     text-decoration: none;
   }
 }
+.component-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .added-item a {
+    text-decoration: none;
+    button {
+      background: var(--main-color);
+      color: #fff;
+      text-transform: capitalize;
+      font-size: 18px;
+      text-decoration: none;
+      &:hover {
+        color: var(--main-color);
+        border: 1px solid var(--main-color);
+        background: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}

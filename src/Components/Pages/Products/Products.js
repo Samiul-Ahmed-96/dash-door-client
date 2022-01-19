@@ -1,4 +1,4 @@
-import { DeleteOutlined, ModeEdit } from "@mui/icons-material";
+import { AddCircleOutlineOutlined, DeleteOutlined, ModeEdit } from "@mui/icons-material";
 import {
   Alert,
   Box,
@@ -57,7 +57,9 @@ const Products = () => {
       }
         <Box className="component-title">
           <h2>Manage All Products</h2>
-          
+          <div className="added-item">
+          <Link to="/addNewProduct"><Button variant="outlined"><AddCircleOutlineOutlined/> Add New Product</Button></Link>
+        </div>
         </Box>
         {products.length === 0 ? (
           <LinearProgress />

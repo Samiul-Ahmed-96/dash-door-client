@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
+import AddNewProduct from './Components/Pages/AddNewProduct/AddNewProduct';
 import Home from './Components/Pages/Home/Home/Home';
 import Members from './Components/Pages/Members/Members';
 import ProductEdit from './Components/Pages/ProductEdit/ProductEdit';
@@ -20,6 +21,9 @@ function App() {
       </Route>
       <Route exact path="/manageProducts">
           <Products/>
+      </Route>
+      <Route exact path="/addNewProduct">
+          <AddNewProduct/>
       </Route>
       <Route exact path="/ProductEdit/:id">
           <ProductEdit/>

@@ -135,6 +135,7 @@ const ProductEdit = () => {
       }
         <Box className="component-title">
           <h2>Product Sales Analytics</h2>
+         
         </Box>
         <ResponsiveContainer width="100%" height="80%">
         <BarChart
