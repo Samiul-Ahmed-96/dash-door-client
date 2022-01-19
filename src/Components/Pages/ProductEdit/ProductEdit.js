@@ -108,22 +108,22 @@ const ProductEdit = () => {
   //Update
   const handleUpdate = (e) => {
     e.preventDefault();
-    // const url = `https://stormy-basin-00847.herokuapp.com/services/${id}`
-    // fetch(url,{
-    //     method : "PUT",
-    //     headers: {
-    //         'content-type': 'application/json'
-    //     },
-    //     body:JSON.stringify(singleItem)
-    // }) 
-    // .then(res => res.json())
-    // .then(data =>{
-    //     console.log(data)
-    //     if(data.modifiedCount===1){
-    //         alert('Update Successfully');
-    //     }
+    const url = `http://localhost:5000/watchItems/${id}`
+    fetch(url,{
+        method : "PUT",
+        headers: {
+            'content-type': 'application/json'
+        },
+        body:JSON.stringify(singleItem)
+    }) 
+    .then(res => res.json())
+    .then(data =>{
+        console.log(data)
+        if(data.modifiedCount===1){
+            alert('Update Successfully');
+        }
         
-    // })
+    })
   };
   return (
     <Grid spacing={2} container padding={3} marginTop={6}>
@@ -151,7 +151,7 @@ const ProductEdit = () => {
         </BarChart>
       </ResponsiveContainer>
       </Grid>
-      <Grid item lg={3} md={3} sm={12} xs={12} marginTop={1}>
+      <Grid item lg={4} md={4} sm={12} xs={12} marginTop={1}>
         <Box className="component-title">
           <h2>Product Details</h2>
         </Box>
@@ -164,7 +164,7 @@ const ProductEdit = () => {
           </Box>
         </Paper>
       </Grid>
-      <Grid item lg={9} md={9} sm={12} xs={12} marginTop={1}>
+      <Grid item lg={8} md={8} sm={12} xs={12} marginTop={1}>
         <Box className="component-title">
           <h2>Edit Product</h2>
         </Box>
