@@ -57,6 +57,7 @@ const Products = () => {
       }
         <Box className="component-title">
           <h2>Manage All Products</h2>
+          
         </Box>
         {products.length === 0 ? (
           <LinearProgress />

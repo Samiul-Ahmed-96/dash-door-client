@@ -8,7 +8,7 @@ import {
   Tooltip,
   XAxis
 } from "recharts";
-import './Chart.scss';
+
 const Chart = () => {
   const data = [
     {
@@ -64,18 +64,19 @@ const Chart = () => {
     },
   ];
   return (
-    <Grid id="userAnalytics" spacing={2} container padding={3}>
+    
+    <Grid id="userAnalytics"  container padding={3}>
       <Grid item lg={12} md={12} sm={12} xs={12}>
         <Box className="component-title">
           <h2>User Analytics</h2>
         </Box>
         <ResponsiveContainer
           className='userChart'
-          sx={{ width: "100%", padding: "10px" }}
-          aspect={4 / 1}
+          width="100%" height="85%"
+        
         >
           <LineChart data={data}>
-            <CartesianGrid strokeDasharray="5 5" />
+            <CartesianGrid strokeDasharray="4 4" />
             <XAxis dataKey="name" stroke="#303e67" />
             <Tooltip />
 

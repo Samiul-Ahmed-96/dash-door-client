@@ -54,7 +54,7 @@ const Navbar = () => {
     },
   });
   //Destructure Styles
-  const { navItem, brandIcon, navIcon, appbarMain, userImg } = useStyle();
+  const { brandIcon, navIcon, appbarMain, userImg } = useStyle();
   //Drawer content
   const [state, setState] = React.useState(false);
 
@@ -105,7 +105,7 @@ const Navbar = () => {
             <PaidOutlined/>  <HashLink to="/members#transaction">Transaction</HashLink>
             </ListItemText>
             <ListItemText>
-            <ReportOutlined/>  <Link to="/home">Reports</Link>
+            <ReportOutlined/>  <Link to="/home#salesReport">Sales Report</Link>
             </ListItemText>
           </Box>
         </ListItem>
