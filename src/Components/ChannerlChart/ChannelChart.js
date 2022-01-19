@@ -1,7 +1,7 @@
 import { Box, Grid } from '@mui/material';
 import React from 'react';
 import {
-    Bar, CartesianGrid, ComposedChart, Legend, ResponsiveContainer, Tooltip, XAxis,
+    Bar, CartesianGrid, ComposedChart, ResponsiveContainer, Tooltip, XAxis,
     YAxis
 } from 'recharts';
   
@@ -48,7 +48,7 @@ const ChannelChart = () => {
           <XAxis type="number" />
           <YAxis dataKey="name" type="category" scale="band" />
           <Tooltip />
-          <Legend />
+
 
           <Bar dataKey="visitor" barSize={20} fill="#82ca9d" />
 
