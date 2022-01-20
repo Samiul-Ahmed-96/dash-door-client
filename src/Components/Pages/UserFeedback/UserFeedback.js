@@ -1,5 +1,7 @@
+import { GradeRounded, StarBorderRounded } from '@mui/icons-material';
 import { Box, Grid } from '@mui/material';
 import React, { useEffect, useState } from 'react';
+import Rating from 'react-rating';
 import './UserFeedback.scss';
 
 const UserFeedback = () => {
@@ -21,7 +23,11 @@ const UserFeedback = () => {
                         <div key={singleFeedback._id} className="single-feedback">
                             <h1>{singleFeedback.name}</h1>
                             <h3>{singleFeedback.massage}</h3>
-                            <h2>User Rating : {singleFeedback.rating}</h2>
+                            <Rating 
+                            emptySymbol={<StarBorderRounded/>}
+                            fullSymbol={<GradeRounded/>}
+                            initialRating={singleFeedback.rating} readonly>
+                            </Rating>
                         </div>
                  )
         }
