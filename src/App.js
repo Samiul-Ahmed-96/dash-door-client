@@ -3,6 +3,7 @@ import './App.scss';
 import AddNewProduct from './Components/Pages/AddNewProduct/AddNewProduct';
 import Home from './Components/Pages/Home/Home/Home';
 import Members from './Components/Pages/Members/Members';
+import OrderList from './Components/Pages/OrderList/OrderList';
 import ProductEdit from './Components/Pages/ProductEdit/ProductEdit';
 import Products from './Components/Pages/Products/Products';
 import SalesReport from './Components/Pages/SalesReport/SalesReport';
@@ -29,6 +30,9 @@ function App() {
       </Route>
       <Route exact path="/userFeedback">
           <UserFeedback/>
+      </Route>
+      <Route exact path="/OrderList">
+          <OrderList/>
       </Route>
       <Route exact path="/salesReport">
           <SalesReport/>

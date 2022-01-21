@@ -98,7 +98,7 @@ const Navbar = () => {
           <Box>
             <h4>Products</h4>
             <ListItemText>
-              <ProductionQuantityLimitsOutlined />{" "}
+              <ProductionQuantityLimitsOutlined />
               <Link to="/manageProducts">Manage Products</Link>
             </ListItemText>
 
@@ -113,9 +113,9 @@ const Navbar = () => {
         <Divider />
         <ListItem button>
           <Box>
-            <h4>Staff</h4>
+            <h4>Orders</h4>
             <ListItemText>
-              <ManageAccountsOutlined /> <Link to="/home">Manage</Link>
+              <ManageAccountsOutlined /> <Link to="/OrderList">Order List</Link>
             </ListItemText>
           </Box>
         </ListItem>
