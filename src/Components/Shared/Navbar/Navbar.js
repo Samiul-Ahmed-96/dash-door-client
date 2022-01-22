@@ -4,8 +4,7 @@ import {
   ExitToAppOutlined,
   HomeOutlined,
   MailOutlineOutlined,
-  ManageAccountsOutlined, MessageOutlined,
-  NotificationsNoneOutlined,
+  ManageAccountsOutlined, NotificationsNoneOutlined,
   PaidOutlined,
   ProductionQuantityLimitsOutlined,
   ReportOutlined,
@@ -33,6 +32,7 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const theme = useTheme();
+  
   const useStyle = makeStyles({
     navItem: {
       color: "#fff",
@@ -79,18 +79,17 @@ const Navbar = () => {
           <Box>
             <h4>Users</h4>
             <ListItemText>
-            <SupervisedUserCircleSharp /> <Link to="/members">All Users</Link>
-          </ListItemText>
-          <ListItemText>
-          <PaidOutlined />
-          <HashLink to="/members#transaction">User Transaction</HashLink>
-        </ListItemText>
-            <ListItemText>
-              <DynamicFeedOutlined /> <Link to="/userFeedback">User Feedback</Link>
+              <SupervisedUserCircleSharp /> <Link to="/members">All Users</Link>
             </ListItemText>
             <ListItemText>
-              <MessageOutlined /> <Link to="/home">Messages</Link>
+              <PaidOutlined />
+              <HashLink to="/transaction">User Transaction</HashLink>
             </ListItemText>
+            <ListItemText>
+              <DynamicFeedOutlined />{" "}
+              <Link to="/userFeedback">User Feedback</Link>
+            </ListItemText>
+
           </Box>
         </ListItem>
         <Divider />
@@ -154,14 +153,13 @@ const Navbar = () => {
               />
               <MailOutlineOutlined />
               <NotificationsNoneOutlined />
-
               <Settings />
               <ExitToAppOutlined />
             </Box>
           </Toolbar>
         </AppBar>
       </Box>
-
+    
       <div>
         <React.Fragment>
           <Drawer open={state} onClose={() => setState(false)}>

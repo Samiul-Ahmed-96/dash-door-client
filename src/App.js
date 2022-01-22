@@ -7,12 +7,13 @@ import OrderList from './Components/Pages/OrderList/OrderList';
 import ProductEdit from './Components/Pages/ProductEdit/ProductEdit';
 import Products from './Components/Pages/Products/Products';
 import SalesReport from './Components/Pages/SalesReport/SalesReport';
+import Transaction from './Components/Pages/Transaction/Transaction';
 import UserFeedback from './Components/Pages/UserFeedback/UserFeedback';
 import Navbar from './Components/Shared/Navbar/Navbar';
 
 function App() {
   return (
-    <div className="App">
+    <div  className="App">
     <BrowserRouter>
     <Navbar/>
     <Switch>
@@ -33,6 +34,9 @@ function App() {
       </Route>
       <Route exact path="/OrderList">
           <OrderList/>
+      </Route>
+      <Route exact path="/transaction">
+          <Transaction/>
       </Route>
       <Route exact path="/salesReport">
           <SalesReport/>

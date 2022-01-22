@@ -1,5 +1,5 @@
 import { GradeRounded, StarBorderRounded } from '@mui/icons-material';
-import { Box, Grid } from '@mui/material';
+import { Box, Grid, LinearProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Rating from 'react-rating';
 import './UserFeedback.scss';
@@ -17,21 +17,27 @@ const UserFeedback = () => {
         <Box className="component-title">
           <h2>User Feedback</h2>
         </Box>
-        <div className="feedback-container">
-        {
-            userFeedback.map(singleFeedback => 
-                        <div key={singleFeedback._id} className="single-feedback">
-                            <h1>{singleFeedback.name}</h1>
-                            <h3>{singleFeedback.massage}</h3>
-                            <Rating 
-                            emptySymbol={<StarBorderRounded/>}
-                            fullSymbol={<GradeRounded/>}
-                            initialRating={singleFeedback.rating} readonly>
-                            </Rating>
-                        </div>
-                 )
-        }
-        </div>
+       {
+         userFeedback === 0 ? (
+          <LinearProgress />
+         ):(
+          <div className="feedback-container">
+          {
+              userFeedback.map(singleFeedback => 
+                          <div key={singleFeedback._id} className="single-feedback">
+                              <h1>{singleFeedback.name}</h1>
+                              <h3>{singleFeedback.massage}</h3>
+                              <Rating 
+                              emptySymbol={<StarBorderRounded/>}
+                              fullSymbol={<GradeRounded/>}
+                              initialRating={singleFeedback.rating} readonly>
+                              </Rating>
+                          </div>
+                   )
+          }
+          </div>
+         )
+       }
       </Grid>
 
     </Grid>

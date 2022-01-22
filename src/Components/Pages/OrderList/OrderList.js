@@ -1,38 +1,54 @@
+import { ArrowCircleLeftOutlined, DeleteOutlined } from "@mui/icons-material";
 import {
-    AddCircleOutlineOutlined,
-    DeleteOutlined,
-    ModeEdit
-} from "@mui/icons-material";
-import {
-    Alert,
-    Box,
-    Button,
-    Grid,
-    LinearProgress,
-    Paper,
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableHead,
-    TableRow
+  Alert,
+  Box,
+  Button,
+  Grid,
+  LinearProgress,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-
 const OrderList = () => {
-      //State
+  //State
   const [allOrders, setAllOrders] = useState([]);
   const [success, setSuccess] = useState(false);
-   //Data Load
-   useEffect(() => {
+  //Data Load
+  useEffect(() => {
     fetch("http://localhost:5000/orders")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, []);
-    return (
-        <Grid spacing={2} container padding={3} marginTop={6}>
+
+   //handle Delete
+   const handleDelete = (id ) =>{
+    const deleteConfirm = window.confirm("Want to delete?");
+    if (deleteConfirm) {
+        const url = `http://localhost:5000/orders/${id}`;
+        fetch(url,{
+            method : 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+
+            if(data.deletedCount){
+                setSuccess(true);
+                const remaining = allOrders.filter(order => order._id !== id)
+                setAllOrders(remaining);
+            }
+        })
+    }
+    
+}
+  return (
+    <Grid spacing={2} container padding={3} marginTop={6}>
       <Grid item lg={12} md={12} sm={12} xs={12} marginTop={1}>
         {success === true && (
           <Alert className="update-alert" severity="success">
@@ -42,9 +58,9 @@ const OrderList = () => {
         <Box className="component-title">
           <h2>Order List</h2>
           <div className="added-item">
-            <Link to="/addNewProduct">
+            <Link to="/home">
               <Button variant="outlined">
-                <AddCircleOutlineOutlined /> Add New Product
+                <ArrowCircleLeftOutlined /> Back To Home
               </Button>
             </Link>
           </div>
@@ -87,15 +103,11 @@ const OrderList = () => {
                     <TableCell align="right">{order.phone}</TableCell>
                     <TableCell align="right">
                       <div className="product-action">
-                        <Link to={`/orderEdit/${order._id}`}>
-                          <Button variant="outlined" className="edit-btn">
-                            <ModeEdit />
-                          </Button>
-                        </Link>
-                        <Button
-                          variant="contained"
-                          className="delete-btn"
-                        >
+                        <Button variant="outlined" className="edit-btn">
+                          Update Status
+                        </Button>
+
+                        <Button  onClick={()=>handleDelete(order._id)} variant="contained" className="delete-btn">
                           <DeleteOutlined />
                         </Button>
                       </div>
@@ -108,7 +120,7 @@ const OrderList = () => {
         )}
       </Grid>
     </Grid>
-    );
+  );
 };
 
 export default OrderList;
