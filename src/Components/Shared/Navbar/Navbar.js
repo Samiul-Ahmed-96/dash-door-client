@@ -1,16 +1,16 @@
 import {
+  AddCircleOutlineOutlined,
   AutoGraphOutlined,
   DynamicFeedOutlined,
   ExitToAppOutlined,
   HomeOutlined,
-  MailOutlineOutlined,
-  ManageAccountsOutlined, NotificationsNoneOutlined,
+  ListAltOutlined,
+  MailOutlineOutlined, NotificationsNoneOutlined,
   PaidOutlined,
   ProductionQuantityLimitsOutlined,
   ReportOutlined,
   Settings,
-  SupervisedUserCircleSharp,
-  TrendingDownOutlined
+  SupervisedUserCircleSharp
 } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material";
@@ -64,14 +64,6 @@ const Navbar = () => {
             <ListItemText>
               <HomeOutlined /> <Link to="/home"> Home</Link>
             </ListItemText>
-            <ListItemText>
-              <AutoGraphOutlined />{" "}
-              <HashLink to="/home#userAnalytics">User Analytics</HashLink>
-            </ListItemText>
-            <ListItemText>
-              <TrendingDownOutlined />{" "}
-              <HashLink to="/home#featuredInfo">Sales</HashLink>
-            </ListItemText>
           </Box>
         </ListItem>
         <Divider />
@@ -89,6 +81,10 @@ const Navbar = () => {
               <DynamicFeedOutlined />{" "}
               <Link to="/userFeedback">User Feedback</Link>
             </ListItemText>
+            <ListItemText>
+            <AutoGraphOutlined />{" "}
+            <HashLink to="/home#userAnalytics">User Analytics</HashLink>
+          </ListItemText>
 
           </Box>
         </ListItem>
@@ -102,7 +98,7 @@ const Navbar = () => {
             </ListItemText>
 
             <ListItemText>
-              <ReportOutlined /> <Link to="/addNewProduct">Add A Product</Link>
+              <AddCircleOutlineOutlined /> <Link to="/addNewProduct">Add A Product</Link>
             </ListItemText>
             <ListItemText>
               <ReportOutlined /> <Link to="/salesReport">Sales Report</Link>
@@ -114,7 +110,7 @@ const Navbar = () => {
           <Box>
             <h4>Orders</h4>
             <ListItemText>
-              <ManageAccountsOutlined /> <Link to="/OrderList">Order List</Link>
+              <ListAltOutlined /> <Link to="/OrderList">Order List</Link>
             </ListItemText>
           </Box>
         </ListItem>

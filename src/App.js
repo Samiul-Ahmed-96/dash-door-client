@@ -9,6 +9,7 @@ import Products from './Components/Pages/Products/Products';
 import SalesReport from './Components/Pages/SalesReport/SalesReport';
 import Transaction from './Components/Pages/Transaction/Transaction';
 import UserFeedback from './Components/Pages/UserFeedback/UserFeedback';
+import Footer from './Components/Shared/Footer/Footer';
 import Navbar from './Components/Shared/Navbar/Navbar';
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
           <Products/>
       </Route>
     </Switch>
+    <Footer/>
   </BrowserRouter>
     </div>
   );
