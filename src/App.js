@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import AddNewProduct from './Components/Pages/AddNewProduct/AddNewProduct';
+import EditStatus from './Components/Pages/EditStatus/EditStatus';
 import Home from './Components/Pages/Home/Home/Home';
 import Members from './Components/Pages/Members/Members';
 import OrderList from './Components/Pages/OrderList/OrderList';
@@ -11,7 +12,6 @@ import Transaction from './Components/Pages/Transaction/Transaction';
 import UserFeedback from './Components/Pages/UserFeedback/UserFeedback';
 import Footer from './Components/Shared/Footer/Footer';
 import Navbar from './Components/Shared/Navbar/Navbar';
-
 function App() {
   return (
     <div  className="App">
@@ -44,6 +44,9 @@ function App() {
       </Route>
       <Route exact path="/ProductEdit/:id">
           <ProductEdit/>
+      </Route>
+      <Route exact path="/editStatus/:id">
+          <EditStatus/>
       </Route>
       <Route exact path="/members">
           <Members/>

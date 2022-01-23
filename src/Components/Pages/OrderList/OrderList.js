@@ -20,6 +20,7 @@ const OrderList = () => {
   //State
   const [allOrders, setAllOrders] = useState([]);
   const [success, setSuccess] = useState(false);
+  const [updatedOrder,setUpdatedOrder] = useState({});
   //Data Load
   useEffect(() => {
     fetch("http://localhost:5000/orders")
@@ -47,6 +48,7 @@ const OrderList = () => {
     }
     
 }
+
   return (
     <Grid spacing={2} container padding={3} marginTop={6}>
       <Grid item lg={12} md={12} sm={12} xs={12} marginTop={1}>
@@ -103,10 +105,12 @@ const OrderList = () => {
                     <TableCell align="right">{order.phone}</TableCell>
                     <TableCell align="right">
                       <div className="product-action">
-                        <Button variant="outlined" className="edit-btn">
-                          Update Status
-                        </Button>
+                       <Link to={`/editStatus/${order._id}`}>
+                       <Button variant="outlined" className="edit-btn">
+                       Update Status
+                     </Button>
 
+                       </Link>
                         <Button  onClick={()=>handleDelete(order._id)} variant="contained" className="delete-btn">
                           <DeleteOutlined />
                         </Button>
