@@ -134,11 +134,11 @@ const ProductEdit = () => {
   return (
     <Grid spacing={2} container padding={3} marginTop={6}>
       <Grid item lg={12} md={12} sm={12} xs={12} marginTop={1}>
-      {success === true && (
-        <Alert className="update-alert" severity="success">
-          Update Successfully
-        </Alert>
-      )}
+        {success === true && (
+          <Alert className="update-alert" severity="success">
+            Update Successfully
+          </Alert>
+        )}
         <Box className="component-title">
           <h2>Product Sales Analytics</h2>
         </Box>
@@ -157,7 +157,7 @@ const ProductEdit = () => {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <Tooltip />
-            <Bar dataKey="Sales" stackId="a" fill="#303e67" />
+            <Bar dataKey="Sales" stackId="a" fill="#6e47fb" />
             <Bar dataKey="name" stackId="a" fill="#eee" />
           </BarChart>
         </ResponsiveContainer>
@@ -181,7 +181,6 @@ const ProductEdit = () => {
         </Paper>
       </Grid>
       <Grid item lg={8} md={8} sm={12} xs={12} marginTop={1}>
-      
         <Box className="component-title">
           <h2>Edit Product</h2>
         </Box>

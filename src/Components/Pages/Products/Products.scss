@@ -25,14 +25,19 @@
   .added-item a {
     text-decoration: none;
     button {
-      background: var(--main-color);
+      background: rgb(110, 71, 251);
+      background: linear-gradient(
+        186deg,
+        rgba(110, 71, 251, 1) 0%,
+        rgba(6, 0, 47, 1) 100%
+      );
       color: #fff;
       text-transform: capitalize;
-      font-size: 18px;
+      font-size: 16px;
       text-decoration: none;
       &:hover {
         color: var(--main-color);
-        border: 1px solid var(--main-color);
+        border: 1px solid rgb(66, 47, 236);
         background: #fff;
         text-decoration: none;
       }

@@ -12,7 +12,12 @@
   }
 }
 form.update-form {
-  background: var(--main-color);
+  background: rgb(110, 71, 251);
+  background: linear-gradient(
+    186deg,
+    rgba(110, 71, 251, 1) 0%,
+    rgba(6, 0, 47, 1) 100%
+  );
   border: 2px solid #fff;
   padding: 30px 20px;
   input {
@@ -25,8 +30,7 @@ form.update-form {
     border: none;
   }
   input:last-child {
-    background: #303e67;
-    width: 35%;
+    background: var(--main-color);
     margin: 10px auto;
     cursor: pointer;
     text-align: center;
@@ -34,9 +38,4 @@ form.update-form {
     border: 2px solid #fff;
     color: #fff;
   }
-}
-.update-alert {
-  text-align: center;
-  width: 50%;
-  margin: 10px auto;
 }

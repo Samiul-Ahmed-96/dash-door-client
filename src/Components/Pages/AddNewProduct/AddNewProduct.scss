@@ -1,28 +1,33 @@
 .add-product-form {
-  border: 2px solid #303e67;
   padding: 60px 20px;
   border-radius: 5px;
+  background: rgb(110, 71, 251);
+  background: linear-gradient(
+    186deg,
+    rgba(110, 71, 251, 1) 0%,
+    rgba(6, 0, 47, 1) 100%
+  );
 
   input {
     width: 100%;
     margin: 5px 0px;
     padding: 10px 20px;
-    border: 1px solid #303e67;
+    border: 2px solid var(--main-color);
     border-radius: 5px;
     font-size: 1rem;
   }
   input:last-child {
     background: var(--main-color);
-    border: 1px solid var(--main-color);
+    border: 2px solid #313131;
     color: #fff;
     width: 200px;
-    border: none;
     margin: 10px auto;
     transition: 0.3s;
+    font-weight: 600;
     cursor: pointer;
     &:hover {
       color: var(--main-color);
-      border: 1px solid var(--main-color);
+      border: 2px solid var(--main-color);
       background: #fff;
       text-decoration: none;
     }

@@ -38,7 +38,7 @@ const CountryChart = () => {
             <CartesianGrid strokeDasharray="3 3" />
             <Bar
               dataKey="overAllSales"
-              fill="#303e67"
+              fill="#6e47fb"
               background={{ fill: "#eee" }}
             />
           </BarChart>

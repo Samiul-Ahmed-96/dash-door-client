@@ -88,7 +88,7 @@ const SalesReport = () => {
 
           <Tooltip />
 
-          <Bar dataKey="revenue" barSize={20} fill="#303e67" />
+          <Bar dataKey="revenue" barSize={20} fill="#6e47fb" />
           <Line type="monotone" dataKey="netProfit" stroke="#ff7300" />
         </ComposedChart>
       </ResponsiveContainer>

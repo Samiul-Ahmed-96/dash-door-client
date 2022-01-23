@@ -83,7 +83,7 @@ const Chart = () => {
             <Line
               type="monotone"
               dataKey="Active User"
-              stroke="#303e67"
+              stroke="#6e47fb"
               activeDot={{ r: 12 }}
             />
           </LineChart>

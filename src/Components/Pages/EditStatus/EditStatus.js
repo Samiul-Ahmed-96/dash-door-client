@@ -8,15 +8,13 @@ const EditStatus = () => {
   //State
   const [updateOrder, setUpdateOrder] = useState({});
   const [success, setSuccess] = useState(false);
-
-  console.log(updateOrder);
-
   //Data load
   useEffect(() => {
     fetch(`http://localhost:5000/orders/${id}`)
       .then((res) => res.json())
       .then((data) => setUpdateOrder(data));
   }, [id]);
+  
   const handleStatusChange = (e) => {
     const updatedStatus = e.target.value;
     const updatedItem = {
@@ -49,22 +47,20 @@ const EditStatus = () => {
         console.log(data);
         if (data.modifiedCount === 1) {
           setSuccess(true);
-          alert("updated");
         }
       });
   };
 
   return (
     <Grid spacing={2} container padding={3} marginTop={6}>
-        <Grid item lg={12} md={12} sm={12} xs={12} marginTop={1}>
-        {success === true && (
-            <Alert className="update-alert" severity="success">
-              Update Successfully
-            </Alert>
-          )}
-        </Grid>
       <Grid item lg={12} md={12} sm={12} xs={12} marginTop={1}>
-     
+        {success === true && (
+          <Alert className="update-alert" severity="success">
+            Update Successfully
+          </Alert>
+        )}
+      </Grid>
+      <Grid item lg={12} md={12} sm={12} xs={12} marginTop={1}>
         <Box className="component-title">
           <h2>Order Details</h2>
         </Box>
@@ -92,7 +88,7 @@ const EditStatus = () => {
             <select
               name="Status"
               onChange={handleStatusChange}
-              defaultValue={updateOrder?.status}
+              value={updateOrder?.status}
             >
               <option value="Approved">Approved</option>
               <option value="Pending">Pending</option>

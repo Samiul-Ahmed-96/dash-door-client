@@ -17,7 +17,7 @@ const DeviceChart = () => {
         <div style={{ width: "100%", height: 300 }}>
           <ResponsiveContainer>
             <PieChart>
-              <Pie dataKey="value" data={data} fill="#303e67" label />
+              <Pie dataKey="value" data={data} fill="#6e47fb" label />
               <Tooltip />
             </PieChart>
           </ResponsiveContainer>

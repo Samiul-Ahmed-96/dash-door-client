@@ -20,7 +20,7 @@ const OrderList = () => {
   //State
   const [allOrders, setAllOrders] = useState([]);
   const [success, setSuccess] = useState(false);
-  const [updatedOrder,setUpdatedOrder] = useState({});
+  const [updatedOrder, setUpdatedOrder] = useState({});
   //Data Load
   useEffect(() => {
     fetch("http://localhost:5000/orders")
@@ -28,26 +28,24 @@ const OrderList = () => {
       .then((data) => setAllOrders(data));
   }, []);
 
-   //handle Delete
-   const handleDelete = (id ) =>{
+  //handle Delete
+  const handleDelete = (id) => {
     const deleteConfirm = window.confirm("Want to delete?");
     if (deleteConfirm) {
-        const url = `http://localhost:5000/orders/${id}`;
-        fetch(url,{
-            method : 'DELETE'
-        })
-        .then(res => res.json())
-        .then(data => {
-
-            if(data.deletedCount){
-                setSuccess(true);
-                const remaining = allOrders.filter(order => order._id !== id)
-                setAllOrders(remaining);
-            }
-        })
+      const url = `http://localhost:5000/orders/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount) {
+            setSuccess(true);
+            const remaining = allOrders.filter((order) => order._id !== id);
+            setAllOrders(remaining);
+          }
+        });
     }
-    
-}
+  };
 
   return (
     <Grid spacing={2} container padding={3} marginTop={6}>
@@ -84,8 +82,8 @@ const OrderList = () => {
                   <TableCell>Order By</TableCell>
                   <TableCell align="right">Email</TableCell>
                   <TableCell align="right">Status</TableCell>
-                  <TableCell align="right">Brand</TableCell>
                   <TableCell align="right">Phone</TableCell>
+                  <TableCell align="right">Action</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -105,13 +103,16 @@ const OrderList = () => {
                     <TableCell align="right">{order.phone}</TableCell>
                     <TableCell align="right">
                       <div className="product-action">
-                       <Link to={`/editStatus/${order._id}`}>
-                       <Button variant="outlined" className="edit-btn">
-                       Update Status
-                     </Button>
-
-                       </Link>
-                        <Button  onClick={()=>handleDelete(order._id)} variant="contained" className="delete-btn">
+                        <Link to={`/editStatus/${order._id}`}>
+                          <Button variant="outlined" className="edit-btn">
+                            Update Status
+                          </Button>
+                        </Link>
+                        <Button
+                          onClick={() => handleDelete(order._id)}
+                          variant="contained"
+                          className="delete-btn"
+                        >
                           <DeleteOutlined />
                         </Button>
                       </div>

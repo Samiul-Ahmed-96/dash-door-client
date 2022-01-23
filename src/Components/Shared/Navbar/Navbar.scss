@@ -18,6 +18,11 @@ span.MuiTypography-root.MuiTypography-body1.MuiListItemText-primary.css-10hburv-
   }
 }
 .css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
-  background-color: var(--main-color) !important;
+  background: rgb(110, 71, 251) !important;
+  background: linear-gradient(
+    186deg,
+    rgba(110, 71, 251, 1) 0%,
+    rgba(6, 0, 47, 1) 100%
+  ) !important;
   color: #fff !important;
 }

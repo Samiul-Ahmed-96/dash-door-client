@@ -5,7 +5,8 @@ import {
   ExitToAppOutlined,
   HomeOutlined,
   ListAltOutlined,
-  MailOutlineOutlined, NotificationsNoneOutlined,
+  MailOutlineOutlined,
+  NotificationsNoneOutlined,
   PaidOutlined,
   ProductionQuantityLimitsOutlined,
   ReportOutlined,
@@ -32,7 +33,7 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const theme = useTheme();
-  
+
   const useStyle = makeStyles({
     navItem: {
       color: "#fff",
@@ -42,7 +43,9 @@ const Navbar = () => {
       textAlign: "left",
     },
     appbarMain: {
-      backgroundColor: "#303e67",
+      background: " rgb(110,71,251)",
+      background:
+        "linear-gradient(186deg, rgba(110,71,251,1) 0%, rgba(6,0,47,1) 100%)",
     },
     userImg: {
       width: "35px",
@@ -82,10 +85,9 @@ const Navbar = () => {
               <Link to="/userFeedback">User Feedback</Link>
             </ListItemText>
             <ListItemText>
-            <AutoGraphOutlined />{" "}
-            <HashLink to="/home#userAnalytics">User Analytics</HashLink>
-          </ListItemText>
-
+              <AutoGraphOutlined />{" "}
+              <HashLink to="/home#userAnalytics">User Analytics</HashLink>
+            </ListItemText>
           </Box>
         </ListItem>
         <Divider />
@@ -98,7 +100,8 @@ const Navbar = () => {
             </ListItemText>
 
             <ListItemText>
-              <AddCircleOutlineOutlined /> <Link to="/addNewProduct">Add A Product</Link>
+              <AddCircleOutlineOutlined />{" "}
+              <Link to="/addNewProduct">Add A Product</Link>
             </ListItemText>
             <ListItemText>
               <ReportOutlined /> <Link to="/salesReport">Sales Report</Link>
@@ -155,7 +158,7 @@ const Navbar = () => {
           </Toolbar>
         </AppBar>
       </Box>
-    
+
       <div>
         <React.Fragment>
           <Drawer open={state} onClose={() => setState(false)}>

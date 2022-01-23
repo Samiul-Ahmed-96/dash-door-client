@@ -46,7 +46,7 @@ const ChannelChart = () => {
             <YAxis dataKey="name" type="category" scale="band" />
             <Tooltip />
 
-            <Bar dataKey="visitor" barSize={20} fill="#303e67" />
+            <Bar dataKey="visitor" barSize={20} fill="#6e47fb" />
           </ComposedChart>
         </ResponsiveContainer>
       </Grid>

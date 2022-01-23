@@ -1,22 +1,30 @@
 .user-info {
   width: 100%;
+  color: var(--main-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
   margin-top: 10px;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
   .user-details {
     text-align: left;
     h3 {
       margin: 0;
       text-transform: capitalize;
-      color: var(--main-color);
     }
   }
   .user-act {
     display: flex;
     align-items: center;
-    background-color: var(--main-color);
+    background: rgb(110, 71, 251);
+    border: 2px solid var(--main-color);
+    background: linear-gradient(
+      186deg,
+      rgba(110, 71, 251, 1) 0%,
+      rgba(6, 0, 47, 1) 100%
+    );
     color: #fff;
     padding: 0px 20px;
     border-radius: 5px;
@@ -25,11 +33,25 @@
     }
   }
 }
+.css-1wl4kqx-MuiTableRow-root {
+  color: #fff !important;
+  background: rgb(110, 71, 251) !important;
+  background: linear-gradient(
+    186deg,
+    rgba(110, 71, 251, 1) 0%,
+    rgba(6, 0, 47, 1) 100%
+  ) !important;
+}
 th.MuiTableCell-root.MuiTableCell-head.MuiTableCell-alignRight.MuiTableCell-sizeMedium.css-1azl6jz-MuiTableCell-root {
   color: #fff !important;
 }
 .css-1ygcj2i-MuiTableCell-root {
   color: rgb(255 255 255 / 87%) !important;
+}
+.css-1ex1afd-MuiTableCell-root {
+  color: rgb(87 55 207) !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
 }
 // for-mobile-screen
 @media only screen and (min-device-width: 300px) and (max-device-width: 600px) {

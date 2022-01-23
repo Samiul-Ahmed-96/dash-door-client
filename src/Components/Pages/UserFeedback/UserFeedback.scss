@@ -3,8 +3,13 @@
   grid-template-columns: auto auto auto;
   grid-gap: 20px;
   .single-feedback {
-    background: #ffffff;
-    color: #303e67;
+    background: rgb(110, 71, 251);
+    background: linear-gradient(
+      186deg,
+      rgba(110, 71, 251, 1) 0%,
+      rgba(6, 0, 47, 1) 100%
+    );
+    color: #ffffff;
     padding: 20px;
     border: 2px solid #303e67;
     border-radius: 5px;
@@ -18,6 +23,6 @@
 
 @media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
   .feedback-container {
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
   }
 }
