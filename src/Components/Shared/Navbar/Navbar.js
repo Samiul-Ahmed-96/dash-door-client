@@ -14,7 +14,7 @@ import {
   SupervisedUserCircleSharp
 } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { useTheme } from "@mui/material";
+import { Switch, useTheme } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
@@ -31,7 +31,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "./Navbar.scss";
 
-const Navbar = () => {
+const Navbar = ({darkMode,setDarkMode}) => {
   const theme = useTheme();
 
   const useStyle = makeStyles({
@@ -145,6 +145,7 @@ const Navbar = () => {
               Dash Door
             </Typography>
             <Box className="navContainer">
+            <Switch checked={darkMode} onChange={()=>setDarkMode(!darkMode)} />
               <img
                 className={userImg}
                 src="https://i.ibb.co/n8GJgH1/52779957-2069016613219812-3461297316164534272ff-nggg.jpg"

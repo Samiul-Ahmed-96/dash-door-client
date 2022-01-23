@@ -1,6 +1,9 @@
 .product-img {
   height: 80px;
   width: 50px;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
 }
 .product-action {
   .delete-btn {
@@ -11,8 +14,6 @@
   .edit-btn {
     text-transform: capitalize;
     margin: 5px;
-    color: var(--main-color);
-    border: 1px solid var(--main-color);
   }
   a {
     text-decoration: none;
