@@ -20,10 +20,14 @@
     border-radius: 5px;
     padding: 0px 20px;
     color: #fff;
+    transition: 0.3s;
     h3,
     h4 {
       margin: 5px 0px;
       font-size: 14px;
+    }
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }

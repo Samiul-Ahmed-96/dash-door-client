@@ -1,9 +1,4 @@
-.feedback-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 20px;
-}
-.single-feedback {
+.home-single-feedback {
   background: rgb(110, 71, 251);
   background: linear-gradient(
     186deg,
@@ -11,17 +6,19 @@
     rgba(6, 0, 47, 1) 100%
   );
   color: #ffffff;
-  padding: 20px;
+  padding: 15px;
   border: 2px solid #303e67;
   border-radius: 5px;
   transition: 0.3s;
+  margin: 20px;
+  h3 {
+    font-weight: 500;
+    a {
+      color: #fff;
+    }
+  }
   &:hover {
     box-shadow: #26394d 0px 20px 30px -10px;
     transform: scaleY(1.025);
-  }
-}
-@media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
-  .feedback-container {
-    grid-template-columns: auto;
   }
 }
