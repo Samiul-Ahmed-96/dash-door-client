@@ -5,6 +5,7 @@ import Chart from "../../../Chart/Chart";
 import CountryChart from "../../../CountryChart/CountryChart";
 import DeviceChart from "../../../DeviceChart/DeviceChart";
 import FeaturedInfo from "../FeaturedInfo/FeaturedInfo";
+import TopProducts from "../TopProducts/TopProducts";
 
 const Home = () => {
   return (
@@ -21,6 +22,9 @@ const Home = () => {
         </Grid>
         <Grid item lg={4} md={4} sm={12} xs={12}>
           <DeviceChart />
+        </Grid>
+        <Grid item lg={6} md={6} sm={12} xs={12}>
+          <TopProducts />
         </Grid>
       </Grid>
       <Grid item lg={12} md={12} sm={12} xs={12}>

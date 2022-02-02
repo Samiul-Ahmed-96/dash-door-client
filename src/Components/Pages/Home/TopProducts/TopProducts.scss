@@ -1,0 +1,29 @@
+.top-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  img {
+    width: 100px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .product-info {
+    background: rgb(110, 71, 251);
+    background: linear-gradient(
+      186deg,
+      rgba(110, 71, 251, 1) 0%,
+      rgba(6, 0, 47, 1) 100%
+    );
+    border-radius: 5px;
+    padding: 0px 20px;
+    color: #fff;
+    h3,
+    h4 {
+      margin: 5px 0px;
+      font-size: 14px;
+    }
+  }
+}

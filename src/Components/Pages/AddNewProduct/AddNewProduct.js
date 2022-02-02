@@ -7,7 +7,7 @@ const AddNewProduct = () => {
   const { register, handleSubmit, reset } = useForm();
   //Handle Submit
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/watchItems", {
+    fetch("http://localhost:5000/products", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -70,7 +70,7 @@ const ProductEdit = () => {
 
   //Data load
   useEffect(() => {
-    fetch(`http://localhost:5000/watchItems/${id}`)
+    fetch(`http://localhost:5000/products/${id}`)
       .then((res) => res.json())
       .then((data) => setSingleItem(data));
   }, []);
@@ -115,7 +115,7 @@ const ProductEdit = () => {
   //Update
   const handleUpdate = (e) => {
     e.preventDefault();
-    const url = `http://localhost:5000/watchItems/${id}`;
+    const url = `http://localhost:5000/products/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

@@ -7,6 +7,7 @@ import AddNewProduct from "./Components/Pages/AddNewProduct/AddNewProduct";
 import EditStatus from "./Components/Pages/EditStatus/EditStatus";
 import Home from "./Components/Pages/Home/Home/Home";
 import Members from "./Components/Pages/Members/Members";
+import NotFound from "./Components/Pages/NotFound/NotFound";
 import OrderList from "./Components/Pages/OrderList/OrderList";
 import ProductEdit from "./Components/Pages/ProductEdit/ProductEdit";
 import Products from "./Components/Pages/Products/Products";
@@ -65,6 +66,9 @@ function App() {
               </Route>
               <Route exact path="/products">
                 <Products />
+              </Route>
+              <Route exact path="*">
+                <NotFound />
               </Route>
             </Switch>
             <Footer />

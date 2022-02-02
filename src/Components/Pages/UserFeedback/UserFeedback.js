@@ -7,7 +7,7 @@ import './UserFeedback.scss';
 const UserFeedback = () => {
     const [userFeedback ,setUserFeedback] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/reviews')
+        fetch('http://localhost:5000/feedback')
         .then(res => res.json())
         .then(data => setUserFeedback(data))
     },[])

@@ -27,7 +27,7 @@ const Products = () => {
   const [success, setSuccess] = useState(false);
   //Data Load
   useEffect(() => {
-    fetch("http://localhost:5000/watchItems")
+    fetch("http://localhost:5000/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -36,7 +36,7 @@ const Products = () => {
   const handleDelete = (id) => {
     const deleteConfirm = window.confirm("Want to delete?");
     if (deleteConfirm) {
-      const url = `http://localhost:5000/watchItems/${id}`;
+      const url = `http://localhost:5000/products/${id}`;
       fetch(url, {
         method: "DELETE",
       })

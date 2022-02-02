@@ -13,8 +13,7 @@ const Footer = () => {
             Samiul Ahmed
           </h3>
         </Box>
-      </Container>
-      <hr />
+      </Container>   
     </div>
   );
 };

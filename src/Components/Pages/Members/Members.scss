@@ -1,6 +1,5 @@
 .user-info {
   width: 100%;
-  color: var(--main-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,11 +47,7 @@ th.MuiTableCell-root.MuiTableCell-head.MuiTableCell-alignRight.MuiTableCell-size
 .css-1ygcj2i-MuiTableCell-root {
   color: rgb(255 255 255 / 87%) !important;
 }
-.css-1ex1afd-MuiTableCell-root {
-  color: rgb(87 55 207) !important;
-  font-weight: 600 !important;
-  font-size: 18px !important;
-}
+
 // for-mobile-screen
 @media only screen and (min-device-width: 300px) and (max-device-width: 600px) {
   .user-info {
